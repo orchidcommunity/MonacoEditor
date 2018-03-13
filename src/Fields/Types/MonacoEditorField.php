@@ -97,5 +97,6 @@ class MonacoEditorField extends Field
         'tabindex',
         'type',
         'value',
+        'language',
     ];
 }
