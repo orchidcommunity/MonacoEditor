@@ -1,6 +1,7 @@
 @push('stylesheets')
-    <script src="/orchids/monacoeditor/js/min/vs/loader.js" type="text/javascript"></script>
+    
 @endpush
+
 @component('dashboard::partials.fields.group',get_defined_vars())
     <div class="monacoeditor-wrapper" data-controller="monacoeditor">
         <div id="{{$id}}" style="height:600px;border:1px solid grey">
@@ -10,7 +11,16 @@
 @endcomponent
 
 @push('scripts')
+    <script src="/orchids/monacoeditor/js/monacoeditor.js" type="text/javascript"></script>
     <script>
+        var jsCode = "{{json_encode($attributes['value'])}}";
+        
+        window.editor = monaco.editor.create(document.getElementById('{{$id}}'), {
+            value: decodeHtml(jsCode), 
+            language: "{{ $attributes['language'] }}",
+        });
+    
+    /*
         require.config({ paths: { 'vs': '/orchids/monacoeditor/js/min/vs' }});
         require(['vs/editor/editor.main'], function() {
             var jsCode = "{{json_encode($attributes['value'])}}";
@@ -19,7 +29,7 @@
                 language: "{{ $attributes['language'] }}",
             });
         });
-        
+      */  
         function decodeHtml(str)
         {
             var map =

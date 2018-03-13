@@ -1,5 +1,7 @@
+/*
 import {Controller} from "stimulus"
-import monaco from '@timkendrick/monaco-editor/dist/external';
+import "monaco-editor/min/vs/loader.js"
+//import * as monaco from '@timkendrick/monaco-editor';
 
  
 export default class extends Controller {
@@ -12,4 +14,4 @@ export default class extends Controller {
             language: 'javascript',
         });
     }
-}    
+}    */

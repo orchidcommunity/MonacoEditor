@@ -10,12 +10,12 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
+    "@timkendrick/monaco-editor": "0.0.9",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "cross-env": "^5.1",
-	"laravel-mix": "^2.0",
+    "laravel-mix": "^2.0",
     "monaco-editor": "^0.10.1",
-    "turbolinks": "^5.1",
-    "@timkendrick/monaco-editor":"*",
-    "stimulus": "^1.0.0"
+    "stimulus": "^1.0.0",
+    "turbolinks": "^5.1"
   }
 }

@@ -15,5 +15,5 @@ const { mix } = require('laravel-mix');
 mix.setPublicPath('public'); 
  
 mix
-	//.js('resources/assets/js/monacoeditor.js', 'js')
-    .copyDirectory('./node_modules/monaco-editor/min', 'public/js/min');
+	.js('resources/assets/js/monacoeditor.js', 'js');
+    //.copyDirectory('./node_modules/monaco-editor/min', 'public/js/min');
