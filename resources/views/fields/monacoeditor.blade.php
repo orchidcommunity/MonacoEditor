@@ -1,3 +1,6 @@
+@push('stylesheets')
+    <script src="/orchids/monacoeditor/js/min/vs/loader.js" type="text/javascript"></script>
+@endpush
 @component('dashboard::partials.fields.group',get_defined_vars())
     <div class="monacoeditor-wrapper" data-controller="monacoeditor">
         <div id="{{$id}}" style="height:600px;border:1px solid grey">
@@ -7,7 +10,6 @@
 @endcomponent
 
 @push('scripts')
-    <script src="/orchids/monacoeditor/js/min/vs/loader.js" type="text/javascript"></script>
     <script>
         require.config({ paths: { 'vs': '/orchids/monacoeditor/js/min/vs' }});
         require(['vs/editor/editor.main'], function() {
@@ -20,7 +22,6 @@
         
         function decodeHtml(str)
         {
-            //str=str.replace(/^&quot;(.+(?=&quot;$))&quot;$/, '$1');
             var map =
             {
                 '&amp;': '&',

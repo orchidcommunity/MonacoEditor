@@ -18,5 +18,6 @@ php artisan vendor:publish --provider="Orchids\MonacoEditor\Providers\MonacoEdit
 Field::tag('monacoeditor')
        ->name('code')
        ->title('Code Block')
-       ->help('Simple web editor'),
+       ->help('Simple web editor')
+       ->language('javascript'),
 ```
